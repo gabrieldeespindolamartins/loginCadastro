@@ -1,0 +1,9 @@
+{
+  "name": "auto-context",
+  "version": "1.5.0",
+  "description": "Automatic context persistence between Claude Code sessions. Saves session state before compaction and on exit, loads context briefing on session start.",
+  "author": {
+    "name": "Floripa Square"
+  },
+  "keywords": ["context", "memory", "productivity", "session-management"]
+}

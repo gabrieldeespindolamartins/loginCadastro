@@ -1,0 +1,14 @@
+{
+  "name": "floripa-square-plugins",
+  "owner": {
+    "name": "Floripa Square"
+  },
+  "plugins": [
+    {
+      "name": "auto-context",
+      "source": "./auto-context",
+      "description": "Automatic context persistence between Claude Code sessions. Saves session state before compaction and on exit, loads context briefing on session start.",
+      "version": "1.5.0"
+    }
+  ]
+}
