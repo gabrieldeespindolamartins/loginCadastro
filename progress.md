@@ -24,3 +24,28 @@
 - Iniciar Fase 1 — Passo 1: criar o `docker-compose.yml` para subir o PostgreSQL
 
 ---
+
+## Sessão 2026-02-22 [manual]
+
+### Feito
+- Validação de pré-requisitos: Node v22.13.1, Python 3.14.2, Docker 29.1.3, Git 2.50.0 — todos OK
+- Explicação das extensões do VS Code (ESLint, Prettier, Python, Thunder Client)
+- Passo 1 concluído: `docker-compose.yml` criado e configurado (PostgreSQL 16, porta 5432, volume persistente)
+- Container `db_login_cadastro` subiu e banco respondeu via `psql`
+- Criação do `Checklist.md` pelo usuário para acompanhar progresso
+- Criação do `Comandos.md` pelo usuário como referência de comandos úteis
+
+### Decisões
+- Container name: `db_login_cadastro`
+- Usuário do banco: `admin123`, banco: `db_login_cadastro`
+- Volume nomeado: `auth_db_data`
+- Campo `version` do docker-compose será removido (obsoleto nas versões recentes)
+
+### Problemas
+- Docker Desktop precisava estar aberto para o `docker-compose up -d` funcionar (resolvido)
+
+### Próximos passos
+- Remover linha `version: "3.8"` do `docker-compose.yml` (opcional, elimina warning)
+- Iniciar Passo 2: criar projeto backend com FastAPI na pasta `backend/`
+
+---

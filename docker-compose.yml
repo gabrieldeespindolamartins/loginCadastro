@@ -1,0 +1,17 @@
+
+
+services:
+  db:
+    image: "postgres:16"
+    container_name: "db_login_cadastro"
+    environment:
+      POSTGRES_USER: "admin123"
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_DB: "db_login_cadastro"
+    ports:
+      - "5432:5432"
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data
+
+volumes:
+  auth_db_data:
