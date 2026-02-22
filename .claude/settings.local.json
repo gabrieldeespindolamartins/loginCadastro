@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(unzip:*)"
+      "Bash(unzip:*)",
+      "Bash(cd C:\\\\Users\\\\Gabri\\\\OneDrive\\\\Área de Trabalho\\\\SistemaLoginCadastro\\\\backend:*)",
+      "Bash(cd:*)",
+      "Bash(docker exec:*)"
     ]
   }
 }

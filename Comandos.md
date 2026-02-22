@@ -21,4 +21,7 @@ Acessa o health (rota para verificar se o back esta on)
     http://localhost:8000/health
 
 Acessa o swager (documentação automatica da api)
-    http://localhost:8000/docs  
+    http://localhost:8000/docs
+
+Gerar migração com alembic
+    alembic revision --autogenerate -m "mensagem estilo commit"
