@@ -9,7 +9,7 @@
 
 ### Fase 1 — Fundação
 - [X] Docker Compose rodando PostgreSQL
-- [ ] Projeto FastAPI inicializado e respondendo em /docs
+- [X] Projeto FastAPI inicializado e respondendo em /docs
 - [ ] Modelo User criado com SQLAlchemy
 - [ ] Primeira migração aplicada com Alembic
 - [ ] Schemas Pydantic definidos (UserCreate, UserLogin, UserResponse, TokenResponse)
