@@ -121,3 +121,30 @@
 > Use `claude --resume` para retomar esta sessão.
 
 ---
+
+## Sessão 2026-03-02 [manual]
+
+### Feito
+- `psycopg2-binary` desinstalado do venv (confirmado — não aparece mais no requirements)
+- `requirements.txt` regenerado em UTF-8 (corrigido encoding UTF-16 do PowerShell usando `Out-File -Encoding utf8`)
+- Commit do Passo 3 realizado pelo usuário
+- Explicação do Passo 4 (schemas Pydantic) — conceito de schemas de entrada/saída, validação e serialização
+- Passo 4 iniciado: pasta `app/schemas/` criada com `__init__.py` e `user.py`
+- Primeira versão dos schemas escrita pelo usuário (UserCreate e UserResponse)
+- Revisão feita — identificados 3 ajustes necessários
+
+### Decisões
+- Para gerar `requirements.txt` no PowerShell, usar `pip freeze | Out-File -Encoding utf8 requirements.txt` (evita UTF-16)
+- Schemas seguem convenção PascalCase: `UserCreate`, `UserLogin`, `UserResponse`
+- `UserResponse` nunca deve expor a senha
+
+### Problemas
+- `requirements.txt` inicialmente gerado em UTF-16 pelo operador `>` do PowerShell — resolvido com `Out-File -Encoding utf8`
+- Erro de digitação ao ativar venv: `.\venv\Script\activate` em vez de `.\venv\Scripts\activate` — resolvido
+
+### Próximos passos
+- Corrigir schemas: PascalCase nos nomes, remover password do UserResponse, adicionar model_config, criar UserLogin
+- Após correção, validar e fazer commit do Passo 4
+- Iniciar Passo 5: endpoints de cadastro e login
+
+---
