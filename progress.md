@@ -148,3 +148,55 @@
 - Iniciar Passo 5: endpoints de cadastro e login
 
 ---
+
+## Sessão 2026-03-05 [manual]
+
+### Feito
+- Passo 4 concluído e commitado: schemas Pydantic finalizados
+  - Schemas corrigidos: PascalCase, senha removida do UserResponse, model_config adicionado, UserLogin e TokenResponse criados
+  - Arquivo renomeado de `user.py` para `auth.py` (conforme guia)
+  - Comentários adicionados pelo usuário e revisados
+- Passo 5 iniciado: utilitários de segurança
+  - Pasta `app/utils/` criada
+  - `hashing.py` concluído com `hash_password` e `verify_password` (bcrypt)
+  - Usuário escreveu as funções com orientação, corrigindo erros iterativamente
+  - `jwt.py` em andamento — funções da biblioteca PyJWT apresentadas (`jwt.encode`, `jwt.decode`, `datetime`/`timedelta`)
+
+### Decisões
+- Schema renomeado para `auth.py` seguindo o guia
+- `hashing.py` usa `hashpw`, `gensalt`, `checkpw` do bcrypt
+- JWT usará algoritmo HS256, access token 15-30min, refresh token 7 dias
+
+### Problemas
+- Nenhum
+
+### Próximos passos
+- Usuário criar `utils/jwt.py` com as 3 funções (create_access_token, create_refresh_token, decode_token)
+- Testar hashing e JWT manualmente no terminal Python
+- Commit do Passo 5
+- Iniciar Passo 6: rota de cadastro (`POST /auth/register`)
+
+---
+
+## Sessão 2026-03-09 [manual]
+
+### Feito
+- Revisão do contexto do Passo 5 (jwt.py) com os imports já prontos
+- Explicação das 3 funções a implementar: create_access_token, create_refresh_token, decode_token
+- Orientação sobre boa experiência de aprendizado: ler docs, experimentar no terminal antes de codar no projeto
+- Correção de conceito: JWT não é sobre conversão binário/string, mas sobre assinatura criptográfica
+- Explicação do mecanismo de assinatura: payload adulterado invalida a assinatura, acesso negado
+
+### Decisões
+- Abordagem de aprendizado: entender antes de escrever, experimentar no terminal, uma função por vez
+
+### Problemas
+- Nenhum
+
+### Próximos passos
+- Usuário verificar o que está em `settings` (config.py) necessário para JWT (SECRET_KEY e algoritmo)
+- Implementar as 3 funções do jwt.py uma por vez
+- Testar no terminal Python antes de integrar ao projeto
+- Commit do Passo 5 após concluir jwt.py
+
+---

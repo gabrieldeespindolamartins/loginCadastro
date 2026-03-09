@@ -12,7 +12,7 @@
 - [X] Projeto FastAPI inicializado e respondendo em /docs
 - [X] Modelo User criado com SQLAlchemy
 - [X] Primeira migração aplicada com Alembic
-- [ ] Schemas Pydantic definidos (UserCreate, UserLogin, UserResponse, TokenResponse)
+- [X] Schemas Pydantic definidos (UserCreate, UserLogin, UserResponse, TokenResponse)
 - [ ] Funções de hash com bcrypt funcionando
 - [ ] Funções de JWT com PyJWT funcionando
 - [ ] Rota POST /auth/register criando usuário com senha hasheada
